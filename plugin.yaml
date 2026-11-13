@@ -1,0 +1,46 @@
+name: puffin
+label: Puffin
+kind: platform
+version: 0.1.0
+description: "Puffin for Hermes: your agent's inbox, chats, contacts and calendar as tools (sends wait for approval), and Hermes from your phone over Telegram, Slack, Discord or email."
+author: Puffin
+# Nothing is asked at install: `hermes puffin setup --code <CODE>` writes these into ~/.hermes/.env.
+optional_env:
+  - name: PUFFIN_API_KEY
+    description: "The agent's key; hermes puffin setup --code <CODE> fills it in"
+    prompt: "Puffin agent key"
+    password: true
+  - name: PUFFIN_IDENTITY_ID
+    description: "The Puffin agent's id; filled in by hermes puffin setup"
+    prompt: "Puffin agent id"
+    password: false
+  - name: PUFFIN_API_URL
+    description: "Puffin API address (default https://api.justpuffin.tech)"
+    password: false
+  - name: PUFFIN_ALLOWED_USERS
+    description: "Senders Hermes accepts; setup sets it to puffin-owner (Puffin forwards only your own messages)"
+    password: false
+provides_tools:
+  - puffin_messages
+  - puffin_search_messages
+  - puffin_message
+  - puffin_thread
+  - puffin_threads
+  - puffin_mark_read
+  - puffin_reply
+  - puffin_send_message
+  - puffin_channels
+  - puffin_create_draft
+  - puffin_drafts
+  - puffin_send_draft
+  - puffin_contacts
+  - puffin_contact
+  - puffin_contact_timeline
+  - puffin_memories
+  - puffin_remember
+  - puffin_calendar_events
+  - puffin_calendar_free_busy
+  - puffin_calendar_create_event
+  - puffin_sending_status
+  - puffin_tasks
+  - puffin_delegate_task
