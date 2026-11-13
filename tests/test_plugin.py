@@ -120,7 +120,7 @@ class FakePuffin:
         return {"enabled": self.enabled, "runtime": self.runtime, "runtimes": {"hermes": "Hermes"}}
 
     def code_message(self, message_id):
-        return {"id": message_id, "owner": self.owner, "owner_name": "Akarsh", "channel": "telegram",
+        return {"id": message_id, "owner": self.owner, "owner_name": "Priya", "channel": "telegram",
                 "conversation": "telegram:555", "text": "deploy the fix"}
 
     def code_reply(self, message_id, text):
